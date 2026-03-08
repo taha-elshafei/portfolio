@@ -14,28 +14,32 @@ export const NAV_ITEMS: NavItem[] = [
 export const SKILLS: Skill[] = [
   // Backend
   { name: 'C#', icon: 'assets/icons/tech/csharp.svg', category: 'backend' },
+  { name: 'ASP.NET Core', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
   { name: 'ASP.NET MVC', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
   { name: '.NET Framework', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
   { name: 'Identity Framework', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
+  { name: 'JWT Authentication', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
 
   // Database
   { name: 'SQL Server', icon: 'assets/icons/tech/sql-server.svg', category: 'database' },
+  { name: 'MySQL', icon: 'assets/icons/tech/sql-server.svg', category: 'database' },
 
   // Frontend
   { name: 'Angular', icon: 'assets/icons/tech/angular.svg', category: 'frontend' },
+  { name: 'TypeScript', icon: 'assets/icons/tech/typescript.svg', category: 'frontend' },
   { name: 'JavaScript', icon: 'assets/icons/tech/javascript.svg', category: 'frontend' },
   { name: 'HTML5', icon: 'assets/icons/tech/html5.svg', category: 'frontend' },
   { name: 'CSS3', icon: 'assets/icons/tech/css3.svg', category: 'frontend' },
-  { name: 'Bootstrap', icon: 'assets/icons/tech/bootstrap.svg', category: 'frontend' },
-  { name: 'jQuery', icon: 'assets/icons/tech/jquery.svg', category: 'frontend' },
   { name: 'Tailwind CSS', icon: 'assets/icons/tech/tailwind.svg', category: 'frontend' },
-  { name: 'TypeScript', icon: 'assets/icons/tech/typescript.svg', category: 'frontend' },
+  { name: 'Bootstrap', icon: 'assets/icons/tech/bootstrap.svg', category: 'frontend' },
 
   // Tools
   { name: 'Git', icon: 'assets/icons/tech/git.svg', category: 'tools' },
+  { name: 'GitHub', icon: 'assets/icons/tech/git.svg', category: 'tools' },
+  { name: 'Postman', icon: 'assets/icons/tech/vscode.svg', category: 'tools' },
+  { name: 'Figma', icon: 'assets/icons/tech/vscode.svg', category: 'tools' },
   { name: 'Visual Studio', icon: 'assets/icons/tech/vs.svg', category: 'tools' },
   { name: 'VS Code', icon: 'assets/icons/tech/vscode.svg', category: 'tools' },
-  { name: 'Microsoft Office', icon: 'assets/icons/tech/office.svg', category: 'tools' },
 ];
 
 export const PROJECTS: Project[] = [
@@ -45,6 +49,13 @@ export const PROJECTS: Project[] = [
     image: 'assets/images/projects/project-1.webp',
     technologies: ['ASP.NET MVC', '.NET Framework', 'SQL Server', 'Angular', 'Identity Framework'],
     githubUrl: 'https://github.com/mohamedmoharam',
+    featured: true,
+  },
+  {
+    title: 'Nextlearnhub',
+    description: 'A multi-role EdTech SaaS platform with four independent portals: Super Admin, Providers, Provider Profile Subdomain, and End Users. Built a comprehensive Super Admin dashboard, dynamic Provider Profile Subdomain system with unique subdomains, and an End User portal with course browsing, enrollment workflows, and personalized learning dashboards.',
+    image: 'assets/images/projects/project-2.webp',
+    technologies: ['Angular', 'ASP.NET Core', 'SQL Server', 'Tailwind CSS', 'Bootstrap'],
     featured: true,
   },
 ];
@@ -96,16 +107,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const PERSONAL_INFO = {
   name: 'Mohamed Moharam',
-  title: 'Full Stack .NET + Angular Developer',
-  subtitle: 'Building responsive, high-performance web applications with clean architecture',
-  bio: `I'm a Junior Full Stack Developer specialized in .NET and Angular. I have experience building responsive, high-performance web applications using .NET Framework, MVC, SQL Server, and Angular. I'm passionate about clean code, problem-solving, and continuous learning to grow my technical expertise.`,
+  title: 'Full Stack Developer',
+  subtitle: 'Building scalable multi-role SaaS platforms with Angular and .NET',
+  bio: `Full Stack Developer with hands-on experience building scalable multi-role SaaS platforms using Angular and .NET. Skilled in developing RESTful APIs with ASP.NET Core, managing SQL databases, and delivering complete end-to-end features from backend to frontend. Electrical Engineering background brings a disciplined, systems-thinking approach to software architecture and problem-solving.`,
   highlights: [
     { label: 'Education', value: 'B.Eng' },
-    { label: 'Projects Completed', value: '3+' },
-    { label: 'Technologies', value: '10+' },
+    { label: 'Projects Completed', value: '2+' },
+    { label: 'Technologies', value: '15+' },
     { label: 'Focus', value: '.NET' },
   ],
-  cvUrl: '/documents/mohamed-moharam-cv.pdf',
+  cvUrl: '/documents/Mohamed_Moharam_CV.pdf',
   email: 'mmoharam844@gmail.com',
   phone: '+201066922874',
   whatsapp: '+201066922874',

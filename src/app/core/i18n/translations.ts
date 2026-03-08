@@ -79,14 +79,14 @@ export const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   'lang.aria': { en: 'Switch to Arabic', ar: 'Switch to English' },
 
   // Personal Info
-  'personal.title': { en: 'Full Stack .NET + Angular Developer', ar: 'مطور ويب متكامل .NET + Angular' },
+  'personal.title': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
   'personal.subtitle': {
-    en: 'Building responsive, high-performance web applications with clean architecture',
-    ar: 'بناء تطبيقات ويب متجاوبة وعالية الأداء بهندسة برمجية نظيفة',
+    en: 'Building scalable multi-role SaaS platforms with Angular and .NET',
+    ar: 'بناء منصات SaaS متعددة الأدوار وقابلة للتوسع باستخدام Angular و .NET',
   },
   'personal.bio': {
-    en: "I'm a Junior Full Stack Developer specialized in .NET and Angular. I have experience building responsive, high-performance web applications using .NET Framework, MVC, SQL Server, and Angular. I'm passionate about clean code, problem-solving, and continuous learning to grow my technical expertise.",
-    ar: 'أنا مطور ويب متكامل مبتدئ متخصص في .NET و Angular. لدي خبرة في بناء تطبيقات ويب متجاوبة وعالية الأداء باستخدام .NET Framework و MVC و SQL Server و Angular. شغوف بالكود النظيف وحل المشكلات والتعلم المستمر لتطوير خبراتي التقنية.',
+    en: 'Full Stack Developer with hands-on experience building scalable multi-role SaaS platforms using Angular and .NET. Skilled in developing RESTful APIs with ASP.NET Core, managing SQL databases, and delivering complete end-to-end features from backend to frontend. Electrical Engineering background brings a disciplined, systems-thinking approach to software architecture and problem-solving.',
+    ar: 'مطور ويب متكامل لديه خبرة عملية في بناء منصات SaaS متعددة الأدوار وقابلة للتوسع باستخدام Angular و .NET. متمكن في تطوير RESTful APIs باستخدام ASP.NET Core وإدارة قواعد بيانات SQL وتسليم ميزات كاملة من الباكند للفرونت. خلفية هندسية كهربية تضيف منهجية منضبطة في هندسة البرمجيات وحل المشكلات.',
   },
   'personal.highlight_education': { en: 'Education', ar: 'التعليم' },
   'personal.highlight_projects': { en: 'Projects Completed', ar: 'مشاريع منجزة' },

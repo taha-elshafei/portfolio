@@ -5,7 +5,7 @@ import { TranslationService } from '../../../core/services/translation.service';
 @Component({
   selector: 'app-project-card',
   template: `
-    <div class="rounded-xl overflow-hidden border transition-all duration-300
+    <div class="h-full flex flex-col rounded-xl overflow-hidden border transition-all duration-300
                 bg-[var(--color-dark-card)] border-[var(--color-dark-border)]
                 hover:border-[var(--color-primary)] hover:shadow-xl hover:-translate-y-2 group"
     >
@@ -19,11 +19,11 @@ import { TranslationService } from '../../../core/services/translation.service';
       </div>
 
       <!-- Content -->
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <h3 class="text-xl font-bold mb-2 group-hover:text-[var(--color-primary)] transition-colors duration-300">
           {{ project().title }}
         </h3>
-        <p class="text-sm mb-4 leading-relaxed line-clamp-3 text-[var(--color-dark-text-secondary)]">
+        <p class="text-sm mb-4 leading-relaxed flex-1 text-[var(--color-dark-text-secondary)]">
           {{ project().description }}
         </p>
 
@@ -72,6 +72,7 @@ import { TranslationService } from '../../../core/services/translation.service';
   styles: [`
     :host {
       display: block;
+      height: 100%;
     }
     :host-context([data-theme="light"]) div:first-child {
       background-color: var(--color-light-card);
