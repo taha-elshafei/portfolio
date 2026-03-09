@@ -3,11 +3,12 @@ import { HeroComponent } from './sections/hero/hero.component';
 import { AboutComponent } from './sections/about/about.component';
 import { TechStackComponent } from './sections/tech-stack/tech-stack.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
+import { CertificatesComponent } from './sections/certificates/certificates.component';
 import { ContactComponent } from './sections/contact/contact.component';
 
 @Component({
   selector: 'app-home',
-  imports: [HeroComponent, AboutComponent, TechStackComponent, ProjectsComponent, ContactComponent],
+  imports: [HeroComponent, AboutComponent, TechStackComponent, ProjectsComponent, CertificatesComponent, ContactComponent],
   template: `
     <app-hero />
     @defer (on viewport) {
@@ -22,6 +23,11 @@ import { ContactComponent } from './sections/contact/contact.component';
     }
     @defer (on viewport) {
       <app-projects />
+    } @placeholder {
+      <div class="h-96"></div>
+    }
+    @defer (on viewport) {
+      <app-certificates />
     } @placeholder {
       <div class="h-96"></div>
     }

@@ -1,4 +1,5 @@
 import { Component, inject, signal, ChangeDetectionStrategy, afterNextRender } from '@angular/core';
+import { Router } from '@angular/router';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 import { LanguageToggleComponent } from '../language-toggle/language-toggle.component';
 import { ScrollService } from '../../../core/services/scroll.service';
@@ -10,6 +11,7 @@ const NAV_KEYS = [
   { key: 'nav.about', sectionId: 'about' },
   { key: 'nav.tech_stack', sectionId: 'tech-stack' },
   { key: 'nav.projects', sectionId: 'projects' },
+  { key: 'nav.certificates', sectionId: 'certificates' },
   { key: 'nav.contact', sectionId: 'contact' },
 ];
 
@@ -23,7 +25,7 @@ const NAV_KEYS = [
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-[72px]">
           <!-- Logo -->
-          <button (click)="scrollService.scrollToSection('hero')"
+          <button (click)="navigateToSection('hero')"
                   class="text-xl font-bold tracking-tight cursor-pointer bg-transparent border-none">
             <span class="text-[var(--color-primary)]">&lt;</span>
             <span>{{ personalInfo.name.split(' ')[0] }}</span>
@@ -33,7 +35,7 @@ const NAV_KEYS = [
           <!-- Desktop Nav -->
           <div class="hidden md:flex items-center gap-1">
             @for (item of navKeys; track item.sectionId) {
-              <button (click)="scrollService.scrollToSection(item.sectionId)"
+              <button (click)="navigateToSection(item.sectionId)"
                       class="px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300
                              hover:text-[var(--color-primary)] hover:bg-[var(--color-primary-subtle)]
                              cursor-pointer bg-transparent border-none text-inherit">
@@ -81,7 +83,7 @@ const NAV_KEYS = [
                     bg-[var(--color-dark-bg)]/95 backdrop-blur-md">
           <div class="px-4 py-4 flex flex-col gap-1">
             @for (item of navKeys; track item.sectionId) {
-              <button (click)="scrollService.scrollToSection(item.sectionId); mobileMenuOpen.set(false)"
+              <button (click)="navigateToSection(item.sectionId); mobileMenuOpen.set(false)"
                       class="w-full text-start px-4 py-3 text-sm font-medium rounded-lg
                              hover:text-[var(--color-primary)] hover:bg-[var(--color-primary-subtle)]
                              transition-colors duration-300 cursor-pointer bg-transparent border-none text-inherit">
@@ -118,6 +120,7 @@ const NAV_KEYS = [
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
+  private router = inject(Router);
   scrollService = inject(ScrollService);
   ts = inject(TranslationService);
   navKeys = NAV_KEYS;
@@ -132,5 +135,14 @@ export class NavbarComponent {
         this.scrolled.set(window.scrollY > 50);
       }, { passive: true });
     });
+  }
+
+  navigateToSection(sectionId: string): void {
+    const url = this.router.url;
+    if (url === '/' || url.startsWith('/#')) {
+      this.scrollService.scrollToSection(sectionId);
+    } else {
+      this.router.navigate(['/'], { fragment: sectionId });
+    }
   }
 }

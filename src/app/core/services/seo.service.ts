@@ -27,6 +27,16 @@ export class SeoService {
     this.setJsonLd();
   }
 
+  updateMeta(title: string, description: string): void {
+    const fullTitle = `${title} | Mohamed Mohr`;
+    this.title.setTitle(fullTitle);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ property: 'og:title', content: fullTitle });
+    this.meta.updateTag({ property: 'og:description', content: description });
+    this.meta.updateTag({ name: 'twitter:title', content: fullTitle });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
+  }
+
   private setJsonLd(): void {
     const schema = {
       '@context': 'https://schema.org',

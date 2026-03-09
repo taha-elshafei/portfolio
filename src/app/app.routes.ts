@@ -7,6 +7,10 @@ export const routes: Routes = [
     title: 'Mohamed Mohr | Full Stack .NET + Angular Developer',
   },
   {
+    path: 'projects/:slug',
+    loadComponent: () => import('./features/project-detail/project-detail.component').then(m => m.ProjectDetailComponent),
+  },
+  {
     path: '**',
     loadComponent: () => import('./features/not-found/not-found.component').then(m => m.NotFoundComponent),
     title: '404 - Page Not Found',

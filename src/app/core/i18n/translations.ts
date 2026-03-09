@@ -10,6 +10,7 @@ export const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   'nav.about': { en: 'About', ar: 'نبذة عني' },
   'nav.tech_stack': { en: 'Tech Stack', ar: 'التقنيات' },
   'nav.projects': { en: 'Projects', ar: 'المشاريع' },
+  'nav.certificates': { en: 'Certificates', ar: 'الشهادات' },
   'nav.contact': { en: 'Contact', ar: 'تواصل' },
 
   // Hero
@@ -43,6 +44,13 @@ export const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   'projects.subtitle': { en: "A selection of projects I've built showcasing my full stack expertise", ar: 'مجموعة من المشاريع التي قمت ببنائها تعرض خبرتي في تطوير الويب' },
   'projects.live_demo': { en: 'Live Demo', ar: 'معاينة' },
   'projects.github': { en: 'GitHub', ar: 'GitHub' },
+  'projects.view_details': { en: 'View Details', ar: 'عرض التفاصيل' },
+
+  // Certificates
+  'certs.title_highlight': { en: 'My', ar: 'شهاداتي' },
+  'certs.title_rest': { en: ' Certificates', ar: '' },
+  'certs.subtitle': { en: 'Professional certifications and completed courses', ar: 'الشهادات المهنية والدورات المعتمدة' },
+  'certs.credential': { en: 'Credential ID', ar: 'رقم الشهادة' },
 
   // Contact
   'contact.title_highlight': { en: 'Get In', ar: 'تواصل' },
@@ -122,10 +130,50 @@ export const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   'calc.time3': { en: '1-2 Months', ar: '١-٢ شهور' },
   'calc.time4': { en: '2+ Months', ar: '+٢ شهور' },
 
-  // Project
+  // Project Detail Page
+  'project_detail.back_to_projects': { en: 'Back to Projects', ar: 'العودة للمشاريع' },
+  'project_detail.video_demo': { en: 'Video Demo', ar: 'عرض فيديو' },
+  'project_detail.key_features': { en: 'Key Features', ar: 'المميزات الرئيسية' },
+  'project_detail.technologies': { en: 'Technologies Used', ar: 'التقنيات المستخدمة' },
+  'project_detail.gallery': { en: 'Screenshots', ar: 'لقطات الشاشة' },
+  'project_detail.role': { en: 'Role', ar: 'الدور' },
+  'project_detail.duration': { en: 'Duration', ar: 'المدة' },
+  'project_detail.about_project': { en: 'About This Project', ar: 'عن هذا المشروع' },
+  'project_detail.interested': { en: 'Interested in a similar project?', ar: 'مهتم بمشروع مشابه؟' },
+  'project_detail.interested_desc': { en: "Let's discuss how I can help bring your idea to life with modern web technologies.", ar: 'خلينا نتكلم إزاي أقدر أساعدك تحول فكرتك لواقع بتقنيات ويب حديثة.' },
+  'project_detail.view_all_projects': { en: 'View All Projects', ar: 'عرض كل المشاريع' },
+
+  // Educational Center Project
   'project.edu_center_title': { en: 'Educational Center Management System', ar: 'نظام إدارة مركز تعليمي' },
   'project.edu_center_desc': {
-    en: 'A web-based system to manage students, teachers, classes, and payments for an educational center. Implemented authentication, user roles, and permissions with layered architecture for scalability and maintainability.',
-    ar: 'نظام ويب لإدارة الطلاب والمعلمين والفصول والمدفوعات لمركز تعليمي. تم تنفيذ المصادقة وأدوار المستخدمين والصلاحيات بهندسة طبقية لضمان قابلية التوسع والصيانة.',
+    en: 'A web-based system to manage students, teachers, classes, and payments for an educational center with authentication, user roles, and layered architecture.',
+    ar: 'نظام ويب لإدارة الطلاب والمعلمين والفصول والمدفوعات لمركز تعليمي مع مصادقة وأدوار مستخدمين وهندسة طبقية.',
   },
+  'project.edu_center_long_desc': {
+    en: 'A comprehensive web-based system designed to streamline the management of an educational center. The platform handles student enrollment, teacher assignments, class scheduling, and payment processing. Built with a layered architecture (Presentation, Business Logic, Data Access) to ensure scalability and maintainability. Implemented robust authentication and authorization using Identity Framework with role-based access control for administrators, teachers, and students.',
+    ar: 'نظام ويب شامل مصمم لتسهيل إدارة مركز تعليمي. المنصة تتعامل مع تسجيل الطلاب وتعيين المعلمين وجدولة الفصول ومعالجة المدفوعات. تم بناؤه بهندسة طبقية (العرض، منطق الأعمال، الوصول للبيانات) لضمان قابلية التوسع والصيانة. تم تنفيذ مصادقة وتفويض قوي باستخدام Identity Framework مع التحكم بالوصول المبني على الأدوار للمسؤولين والمعلمين والطلاب.',
+  },
+  'project.edu_center_role': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
+  'project.edu_center_duration': { en: '3 Months', ar: '٣ شهور' },
+  'project.edu_center_feature_1': { en: 'Student & Teacher Management with CRUD operations', ar: 'إدارة الطلاب والمعلمين مع عمليات CRUD' },
+  'project.edu_center_feature_2': { en: 'Role-based authentication using Identity Framework', ar: 'مصادقة مبنية على الأدوار باستخدام Identity Framework' },
+  'project.edu_center_feature_3': { en: 'Class scheduling and payment tracking system', ar: 'نظام جدولة الفصول وتتبع المدفوعات' },
+  'project.edu_center_feature_4': { en: 'Layered architecture for scalability and maintainability', ar: 'هندسة طبقية لقابلية التوسع والصيانة' },
+
+  // Nextlearnhub Project
+  'project.nextlearnhub_title': { en: 'Nextlearnhub', ar: 'Nextlearnhub' },
+  'project.nextlearnhub_desc': {
+    en: 'A multi-role EdTech SaaS platform with four independent portals for Super Admin, Providers, Profile Subdomains, and End Users.',
+    ar: 'منصة SaaS تعليمية متعددة الأدوار بأربع بوابات مستقلة للمسؤول الأعلى ومقدمي الخدمات والنطاقات الفرعية والمستخدمين.',
+  },
+  'project.nextlearnhub_long_desc': {
+    en: 'A comprehensive multi-role EdTech SaaS platform featuring four independent portals. The Super Admin dashboard provides complete platform management. The Provider portal allows educational institutions to manage their courses and content. Each provider gets a unique subdomain with a dynamic profile system. The End User portal offers course browsing, enrollment workflows, and personalized learning dashboards. Built with a modern tech stack focusing on performance, scalability, and user experience.',
+    ar: 'منصة SaaS تعليمية شاملة متعددة الأدوار تتضمن أربع بوابات مستقلة. لوحة تحكم المسؤول الأعلى توفر إدارة كاملة للمنصة. بوابة مقدمي الخدمات تسمح للمؤسسات التعليمية بإدارة دوراتها ومحتواها. كل مقدم خدمة يحصل على نطاق فرعي فريد مع نظام ملف شخصي ديناميكي. بوابة المستخدم النهائي توفر تصفح الدورات وعمليات التسجيل ولوحات تعلم مخصصة. تم بناؤها بتقنيات حديثة مع التركيز على الأداء وقابلية التوسع وتجربة المستخدم.',
+  },
+  'project.nextlearnhub_role': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
+  'project.nextlearnhub_duration': { en: '4 Months', ar: '٤ شهور' },
+  'project.nextlearnhub_feature_1': { en: 'Multi-role portal system (Super Admin, Provider, End User)', ar: 'نظام بوابات متعدد الأدوار (مسؤول أعلى، مقدم خدمة، مستخدم)' },
+  'project.nextlearnhub_feature_2': { en: 'Dynamic subdomain system for provider profiles', ar: 'نظام نطاقات فرعية ديناميكي لملفات مقدمي الخدمات' },
+  'project.nextlearnhub_feature_3': { en: 'Course enrollment workflows and learning dashboards', ar: 'عمليات تسجيل الدورات ولوحات تعلم مخصصة' },
+  'project.nextlearnhub_feature_4': { en: 'Comprehensive admin dashboard for platform management', ar: 'لوحة تحكم شاملة لإدارة المنصة' },
 };

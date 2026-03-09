@@ -18,7 +18,7 @@ import { TranslationService } from '../../../../core/services/translation.servic
         />
 
         <div appScrollAnimation class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          @for (project of projects; track project.title) {
+          @for (project of projects; track project.slug) {
             <app-project-card [project]="project" />
           }
         </div>

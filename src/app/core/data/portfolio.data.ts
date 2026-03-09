@@ -1,3 +1,4 @@
+import { Certificate } from '../models/certificate.model';
 import { Project } from '../models/project.model';
 import { Skill } from '../models/skill.model';
 import { SocialLink } from '../models/social-link.model';
@@ -8,6 +9,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'About', sectionId: 'about' },
   { label: 'Tech Stack', sectionId: 'tech-stack' },
   { label: 'Projects', sectionId: 'projects' },
+  { label: 'Certificates', sectionId: 'certificates' },
   { label: 'Contact', sectionId: 'contact' },
 ];
 
@@ -44,19 +46,69 @@ export const SKILLS: Skill[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'Educational Center Management System',
-    description: 'A web-based system to manage students, teachers, classes, and payments for an educational center. Implemented authentication, user roles, and permissions with layered architecture for scalability and maintainability.',
+    slug: 'edu-center',
+    title: 'project.edu_center_title',
+    description: 'project.edu_center_desc',
+    longDescription: 'project.edu_center_long_desc',
     image: 'assets/images/projects/project-1.webp',
     technologies: ['ASP.NET MVC', '.NET Framework', 'SQL Server', 'Angular', 'Identity Framework'],
     githubUrl: 'https://github.com/mohamedmoharam',
     featured: true,
+    role: 'project.edu_center_role',
+    duration: 'project.edu_center_duration',
+    features: [
+      'project.edu_center_feature_1',
+      'project.edu_center_feature_2',
+      'project.edu_center_feature_3',
+      'project.edu_center_feature_4',
+    ],
+    video: {
+      type: 'youtube',
+      url: 'jNQXAC9IVRw',
+    },
   },
   {
-    title: 'Nextlearnhub',
-    description: 'A multi-role EdTech SaaS platform with four independent portals: Super Admin, Providers, Provider Profile Subdomain, and End Users. Built a comprehensive Super Admin dashboard, dynamic Provider Profile Subdomain system with unique subdomains, and an End User portal with course browsing, enrollment workflows, and personalized learning dashboards.',
-    image: 'assets/images/projects/project-2.webp',
+    slug: 'nextlearnhub',
+    title: 'project.nextlearnhub_title',
+    description: 'project.nextlearnhub_desc',
+    longDescription: 'project.nextlearnhub_long_desc',
+    image: 'assets/images/projects/nextlearn-logo.png',
     technologies: ['Angular', 'ASP.NET Core', 'SQL Server', 'Tailwind CSS', 'Bootstrap'],
     featured: true,
+    role: 'project.nextlearnhub_role',
+    duration: 'project.nextlearnhub_duration',
+    features: [
+      'project.nextlearnhub_feature_1',
+      'project.nextlearnhub_feature_2',
+      'project.nextlearnhub_feature_3',
+      'project.nextlearnhub_feature_4',
+    ],
+    video: {
+      type: 'youtube',
+      url: 'jNQXAC9IVRw',
+    },
+  },
+];
+
+export const CERTIFICATES: Certificate[] = [
+  {
+    title: 'ASP Full Stack Developer',
+    issuer: 'CLS Learning Solutions (Microsoft Partner)',
+    date: '2025',
+    credentialId: '099091',
+    topics: [
+      'Microsoft SQL Essentials',
+      'C# Programming',
+      'HTML5, JavaScript & CSS3',
+      'ASP.NET Core MVC Web Applications',
+      'ASP Core Web APIs',
+    ],
+  },
+  {
+    title: 'Developing ASP.Net Web Applications',
+    issuer: 'Microsoft',
+    date: '2025',
+    courseId: 'Course 20486',
   },
 ];
 
