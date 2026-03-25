@@ -93,10 +93,10 @@ export const TRANSLATIONS: Record<string, Record<Lang, string>> = {
     ar: 'بناء تطبيقات ويب قابلة للتوسع باستخدام .NET و Angular',
   },
   'personal.bio': {
-    en: 'Full Stack Developer with solid experience in C#, ASP.NET Core (Web API & MVC), SQL Server, and front-end technologies including HTML, CSS, JavaScript, jQuery, and Bootstrap. Strong problem-solving skills, a good understanding of software development principles, and hands-on experience building real-world projects with Clean Architecture and CQRS patterns.',
-    ar: 'مطور ويب متكامل لديه خبرة قوية في C# و ASP.NET Core (Web API و MVC) و SQL Server وتقنيات الواجهة الأمامية مثل HTML و CSS و JavaScript و jQuery و Bootstrap. مهارات قوية في حل المشكلات وفهم جيد لمبادئ تطوير البرمجيات وخبرة عملية في بناء مشاريع حقيقية باستخدام Clean Architecture و CQRS.',
+    en: 'Full Stack Developer currently working at Sure Global Technology, building scalable web applications using ASP.NET Core and Angular. Experienced in C#, ASP.NET Core (Web API & MVC), EF Core, SQL Server, and front-end technologies including Angular, TypeScript, Tailwind CSS, and Bootstrap. Skilled in Clean Architecture, CQRS, and MediatR patterns with hands-on experience in JWT authentication and permission-based authorization.',
+    ar: 'مطور ويب متكامل يعمل حالياً في Sure Global Technology، يبني تطبيقات ويب قابلة للتوسع باستخدام ASP.NET Core و Angular. لديه خبرة في C# و ASP.NET Core (Web API و MVC) و EF Core و SQL Server وتقنيات الواجهة الأمامية مثل Angular و TypeScript و Tailwind CSS و Bootstrap. متمكن في Clean Architecture و CQRS و MediatR مع خبرة عملية في JWT authentication والتفويض المبني على الصلاحيات.',
   },
-  'personal.highlight_education': { en: 'Education', ar: 'التعليم' },
+  'personal.highlight_experience': { en: 'Experience', ar: 'الخبرة' },
   'personal.highlight_projects': { en: 'Projects Completed', ar: 'مشاريع منجزة' },
   'personal.highlight_technologies': { en: 'Technologies', ar: 'تقنيات' },
   'personal.highlight_focus': { en: 'Focus', ar: 'التخصص' },

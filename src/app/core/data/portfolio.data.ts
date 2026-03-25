@@ -153,9 +153,9 @@ export const PERSONAL_INFO = {
   name: 'Taha Elshafei',
   title: 'Full Stack Developer',
   subtitle: 'Building scalable web applications with .NET and Angular',
-  bio: `Full Stack Developer with solid experience in C#, ASP.NET Core (Web API & MVC), SQL Server, and front-end technologies including HTML, CSS, JavaScript, jQuery, and Bootstrap. Strong problem-solving skills, a good understanding of software development principles, and hands-on experience building real-world projects with Clean Architecture and CQRS patterns.`,
+  bio: `Full Stack Developer currently working at Sure Global Technology, building scalable web applications using ASP.NET Core and Angular. Experienced in C#, ASP.NET Core (Web API & MVC), EF Core, SQL Server, and front-end technologies including Angular, TypeScript, Tailwind CSS, and Bootstrap. Skilled in Clean Architecture, CQRS, and MediatR patterns with hands-on experience in JWT authentication and permission-based authorization.`,
   highlights: [
-    { label: 'Education', value: 'B.Sc.' },
+    { label: 'Experience', value: 'Sure Global' },
     { label: 'Projects Completed', value: '4+' },
     { label: 'Technologies', value: '20+' },
     { label: 'Focus', value: '.NET' },
