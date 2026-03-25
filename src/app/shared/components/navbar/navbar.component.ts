@@ -44,7 +44,7 @@ const NAV_KEYS = [
             }
             <app-language-toggle />
             <app-theme-toggle />
-            <a [href]="personalInfo.cvUrl" download="Mohamed_Moharam_CV.pdf" target="_blank" rel="noopener noreferrer"
+            <a [href]="personalInfo.cvUrl" download="Taha_Elshafei_CV.pdf" target="_blank" rel="noopener noreferrer"
                class="ms-2 px-4 py-2 text-sm font-medium rounded-lg
                       bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)]
                       transition-colors duration-300 no-underline">
@@ -90,7 +90,7 @@ const NAV_KEYS = [
                 {{ ts.t(item.key) }}
               </button>
             }
-            <a [href]="personalInfo.cvUrl" download="Mohamed_Moharam_CV.pdf" target="_blank" rel="noopener noreferrer"
+            <a [href]="personalInfo.cvUrl" download="Taha_Elshafei_CV.pdf" target="_blank" rel="noopener noreferrer"
                class="mt-2 px-4 py-3 text-sm font-medium rounded-lg text-center
                       bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)]
                       transition-colors duration-300 no-underline">

@@ -89,46 +89,19 @@ export const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   // Personal Info
   'personal.title': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
   'personal.subtitle': {
-    en: 'Building scalable multi-role SaaS platforms with Angular and .NET',
-    ar: 'بناء منصات SaaS متعددة الأدوار وقابلة للتوسع باستخدام Angular و .NET',
+    en: 'Building scalable web applications with .NET and Angular',
+    ar: 'بناء تطبيقات ويب قابلة للتوسع باستخدام .NET و Angular',
   },
   'personal.bio': {
-    en: 'Full Stack Developer with hands-on experience building scalable multi-role SaaS platforms using Angular and .NET. Skilled in developing RESTful APIs with ASP.NET Core, managing SQL databases, and delivering complete end-to-end features from backend to frontend. Electrical Engineering background brings a disciplined, systems-thinking approach to software architecture and problem-solving.',
-    ar: 'مطور ويب متكامل لديه خبرة عملية في بناء منصات SaaS متعددة الأدوار وقابلة للتوسع باستخدام Angular و .NET. متمكن في تطوير RESTful APIs باستخدام ASP.NET Core وإدارة قواعد بيانات SQL وتسليم ميزات كاملة من الباكند للفرونت. خلفية هندسية كهربية تضيف منهجية منضبطة في هندسة البرمجيات وحل المشكلات.',
+    en: 'Full Stack Developer with solid experience in C#, ASP.NET Core (Web API & MVC), SQL Server, and front-end technologies including HTML, CSS, JavaScript, jQuery, and Bootstrap. Strong problem-solving skills, a good understanding of software development principles, and hands-on experience building real-world projects with Clean Architecture and CQRS patterns.',
+    ar: 'مطور ويب متكامل لديه خبرة قوية في C# و ASP.NET Core (Web API و MVC) و SQL Server وتقنيات الواجهة الأمامية مثل HTML و CSS و JavaScript و jQuery و Bootstrap. مهارات قوية في حل المشكلات وفهم جيد لمبادئ تطوير البرمجيات وخبرة عملية في بناء مشاريع حقيقية باستخدام Clean Architecture و CQRS.',
   },
   'personal.highlight_education': { en: 'Education', ar: 'التعليم' },
   'personal.highlight_projects': { en: 'Projects Completed', ar: 'مشاريع منجزة' },
   'personal.highlight_technologies': { en: 'Technologies', ar: 'تقنيات' },
   'personal.highlight_focus': { en: 'Focus', ar: 'التخصص' },
+  'personal.highlight_visitors': { en: 'Visitors', ar: 'زائر' },
   'personal.location': { en: 'Cairo, Egypt', ar: 'القاهرة، مصر' },
-
-  // Quote Calculator
-  'calc.title': { en: 'What Can I Build For You?', ar: 'إيه اللي أقدر أبنيه ليك؟' },
-  'calc.step1': { en: 'Project Type', ar: 'نوع المشروع' },
-  'calc.step2': { en: 'Budget Range', ar: 'نطاق الميزانية' },
-  'calc.step3': { en: 'Timeline', ar: 'المدة الزمنية' },
-  'calc.step4': { en: 'Your Package', ar: 'الباقة المناسبة' },
-  'calc.next': { en: 'Next', ar: 'التالي' },
-  'calc.back': { en: 'Back', ar: 'رجوع' },
-  'calc.reset': { en: 'Start Over', ar: 'ابدأ من جديد' },
-  'calc.lets_talk': { en: "Let's Talk", ar: 'تواصل معي' },
-  'calc.features': { en: 'Included Features', ar: 'المميزات المتضمنة' },
-  'calc.techs': { en: 'Technologies', ar: 'التقنيات المستخدمة' },
-  'calc.estimate': { en: 'Estimated Price', ar: 'السعر التقديري' },
-  'calc.timeline_label': { en: 'Estimated Timeline', ar: 'المدة التقديرية' },
-  'calc.type_landing': { en: 'Landing Page', ar: 'صفحة هبوط' },
-  'calc.type_webapp': { en: 'Web Application', ar: 'تطبيق ويب' },
-  'calc.type_ecommerce': { en: 'E-Commerce', ar: 'متجر إلكتروني' },
-  'calc.type_dashboard': { en: 'Dashboard', ar: 'لوحة تحكم' },
-  'calc.custom_budget': { en: 'Custom Budget', ar: 'ميزانية مخصصة' },
-  'calc.custom_budget_input': { en: 'Your budget (e.g. $2,000)', ar: 'ميزانيتك (مثال: $2,000)' },
-  'calc.custom_desc': { en: 'Describe what you need', ar: 'اوصف اللي محتاجه' },
-  'calc.custom_desc_placeholder': { en: 'Tell me about your project requirements, features you need, any references...', ar: 'احكيلي عن متطلبات مشروعك، المميزات اللي محتاجها، أي مراجع...' },
-  'calc.send_whatsapp': { en: 'Send via WhatsApp', ar: 'أرسل عبر واتساب' },
-  'calc.time1': { en: '1-2 Weeks', ar: '١-٢ أسابيع' },
-  'calc.time2': { en: '2-4 Weeks', ar: '٢-٤ أسابيع' },
-  'calc.time3': { en: '1-2 Months', ar: '١-٢ شهور' },
-  'calc.time4': { en: '2+ Months', ar: '+٢ شهور' },
 
   // Project Detail Page
   'project_detail.back_to_projects': { en: 'Back to Projects', ar: 'العودة للمشاريع' },
@@ -143,37 +116,54 @@ export const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   'project_detail.interested_desc': { en: "Let's discuss how I can help bring your idea to life with modern web technologies.", ar: 'خلينا نتكلم إزاي أقدر أساعدك تحول فكرتك لواقع بتقنيات ويب حديثة.' },
   'project_detail.view_all_projects': { en: 'View All Projects', ar: 'عرض كل المشاريع' },
 
-  // Educational Center Project
-  'project.edu_center_title': { en: 'Educational Center Management System', ar: 'نظام إدارة مركز تعليمي' },
-  'project.edu_center_desc': {
-    en: 'A web-based system to manage students, teachers, classes, and payments for an educational center with authentication, user roles, and layered architecture.',
-    ar: 'نظام ويب لإدارة الطلاب والمعلمين والفصول والمدفوعات لمركز تعليمي مع مصادقة وأدوار مستخدمين وهندسة طبقية.',
+  // Wajjehni Project
+  'project.wajjehni_title': { en: 'Wajjehni - وجّهني', ar: 'وجّهني - Wajjehni' },
+  'project.wajjehni_desc': {
+    en: 'Egyptian tech mentorship platform connecting aspiring developers with experienced mentors, built with Clean Architecture and CQRS.',
+    ar: 'منصة إرشاد تقني مصرية تربط المطورين الطموحين بالمرشدين ذوي الخبرة، مبنية بـ Clean Architecture و CQRS.',
   },
-  'project.edu_center_long_desc': {
-    en: 'A comprehensive web-based system designed to streamline the management of an educational center. The platform handles student enrollment, teacher assignments, class scheduling, and payment processing. Built with a layered architecture (Presentation, Business Logic, Data Access) to ensure scalability and maintainability. Implemented robust authentication and authorization using Identity Framework with role-based access control for administrators, teachers, and students.',
-    ar: 'نظام ويب شامل مصمم لتسهيل إدارة مركز تعليمي. المنصة تتعامل مع تسجيل الطلاب وتعيين المعلمين وجدولة الفصول ومعالجة المدفوعات. تم بناؤه بهندسة طبقية (العرض، منطق الأعمال، الوصول للبيانات) لضمان قابلية التوسع والصيانة. تم تنفيذ مصادقة وتفويض قوي باستخدام Identity Framework مع التحكم بالوصول المبني على الأدوار للمسؤولين والمعلمين والطلاب.',
+  'project.wajjehni_long_desc': {
+    en: 'A full-stack mentorship platform built with .NET 10 and Angular 21, following Clean Architecture with CQRS and MediatR. Features include JWT authentication with refresh tokens, permission-based authorization, admin panel for managing users/mentors/bookings/reviews, public website with mentor browsing and booking, community features, and RTL support. The backend uses EF Core with SQL Server and Serilog for logging.',
+    ar: 'منصة إرشاد متكاملة مبنية بـ .NET 10 و Angular 21، تتبع Clean Architecture مع CQRS و MediatR. تشمل المميزات مصادقة JWT مع refresh tokens وتفويض مبني على الصلاحيات ولوحة تحكم لإدارة المستخدمين والمرشدين والحجوزات والتقييمات وموقع عام لتصفح المرشدين والحجز ومميزات مجتمعية ودعم RTL. الباكند يستخدم EF Core مع SQL Server و Serilog للتسجيل.',
   },
-  'project.edu_center_role': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
-  'project.edu_center_duration': { en: '3 Months', ar: '٣ شهور' },
-  'project.edu_center_feature_1': { en: 'Student & Teacher Management with CRUD operations', ar: 'إدارة الطلاب والمعلمين مع عمليات CRUD' },
-  'project.edu_center_feature_2': { en: 'Role-based authentication using Identity Framework', ar: 'مصادقة مبنية على الأدوار باستخدام Identity Framework' },
-  'project.edu_center_feature_3': { en: 'Class scheduling and payment tracking system', ar: 'نظام جدولة الفصول وتتبع المدفوعات' },
-  'project.edu_center_feature_4': { en: 'Layered architecture for scalability and maintainability', ar: 'هندسة طبقية لقابلية التوسع والصيانة' },
+  'project.wajjehni_role': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
+  'project.wajjehni_duration': { en: 'Ongoing', ar: 'جاري التطوير' },
+  'project.wajjehni_feature_1': { en: 'Clean Architecture with CQRS + MediatR pattern', ar: 'Clean Architecture مع نمط CQRS + MediatR' },
+  'project.wajjehni_feature_2': { en: 'JWT authentication with refresh tokens & permission-based authorization', ar: 'مصادقة JWT مع refresh tokens وتفويض مبني على الصلاحيات' },
+  'project.wajjehni_feature_3': { en: 'Admin panel for users, mentors, bookings, reviews & community', ar: 'لوحة تحكم لإدارة المستخدمين والمرشدين والحجوزات والتقييمات والمجتمع' },
+  'project.wajjehni_feature_4': { en: 'Public website with mentor browsing, booking & SSR support', ar: 'موقع عام لتصفح المرشدين والحجز مع دعم SSR' },
 
-  // Nextlearnhub Project
-  'project.nextlearnhub_title': { en: 'Nextlearnhub', ar: 'Nextlearnhub' },
-  'project.nextlearnhub_desc': {
-    en: 'A multi-role EdTech SaaS platform with four independent portals for Super Admin, Providers, Profile Subdomains, and End Users.',
-    ar: 'منصة SaaS تعليمية متعددة الأدوار بأربع بوابات مستقلة للمسؤول الأعلى ومقدمي الخدمات والنطاقات الفرعية والمستخدمين.',
+  // Training Center Project
+  'project.training_center_title': { en: 'Training Center Management System', ar: 'نظام إدارة مركز تدريب' },
+  'project.training_center_desc': {
+    en: 'A full-featured management system with modules for Labs and Trainers using ASP.NET Core Web API and MVC with Clean Architecture.',
+    ar: 'نظام إدارة متكامل بوحدات للمعامل والمدربين باستخدام ASP.NET Core Web API و MVC مع Clean Architecture.',
   },
-  'project.nextlearnhub_long_desc': {
-    en: 'A comprehensive multi-role EdTech SaaS platform featuring four independent portals. The Super Admin dashboard provides complete platform management. The Provider portal allows educational institutions to manage their courses and content. Each provider gets a unique subdomain with a dynamic profile system. The End User portal offers course browsing, enrollment workflows, and personalized learning dashboards. Built with a modern tech stack focusing on performance, scalability, and user experience.',
-    ar: 'منصة SaaS تعليمية شاملة متعددة الأدوار تتضمن أربع بوابات مستقلة. لوحة تحكم المسؤول الأعلى توفر إدارة كاملة للمنصة. بوابة مقدمي الخدمات تسمح للمؤسسات التعليمية بإدارة دوراتها ومحتواها. كل مقدم خدمة يحصل على نطاق فرعي فريد مع نظام ملف شخصي ديناميكي. بوابة المستخدم النهائي توفر تصفح الدورات وعمليات التسجيل ولوحات تعلم مخصصة. تم بناؤها بتقنيات حديثة مع التركيز على الأداء وقابلية التوسع وتجربة المستخدم.',
+  'project.training_center_long_desc': {
+    en: 'A comprehensive training center management system built with ASP.NET Core, featuring separate Web API and MVC layers with Clean Architecture. Includes modules for managing Labs and Trainers with full CRUD operations, search functionality, pagination, image upload, and HttpClient integration between the API and MVC frontend. The system follows a layered architecture with Domain, Application, Infrastructure, Identity, and Localization layers.',
+    ar: 'نظام إدارة مركز تدريب شامل مبني بـ ASP.NET Core، يتضمن طبقات Web API و MVC منفصلة مع Clean Architecture. يشمل وحدات لإدارة المعامل والمدربين مع عمليات CRUD كاملة ووظائف البحث والتصفح وتحميل الصور وتكامل HttpClient بين الـ API وواجهة MVC. النظام يتبع هندسة طبقية مع طبقات Domain و Application و Infrastructure و Identity و Localization.',
   },
-  'project.nextlearnhub_role': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
-  'project.nextlearnhub_duration': { en: '4 Months', ar: '٤ شهور' },
-  'project.nextlearnhub_feature_1': { en: 'Multi-role portal system (Super Admin, Provider, End User)', ar: 'نظام بوابات متعدد الأدوار (مسؤول أعلى، مقدم خدمة، مستخدم)' },
-  'project.nextlearnhub_feature_2': { en: 'Dynamic subdomain system for provider profiles', ar: 'نظام نطاقات فرعية ديناميكي لملفات مقدمي الخدمات' },
-  'project.nextlearnhub_feature_3': { en: 'Course enrollment workflows and learning dashboards', ar: 'عمليات تسجيل الدورات ولوحات تعلم مخصصة' },
-  'project.nextlearnhub_feature_4': { en: 'Comprehensive admin dashboard for platform management', ar: 'لوحة تحكم شاملة لإدارة المنصة' },
+  'project.training_center_role': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
+  'project.training_center_duration': { en: '2 Months', ar: 'شهرين' },
+  'project.training_center_feature_1': { en: 'CRUD operations with search, pagination & image upload', ar: 'عمليات CRUD مع البحث والتصفح وتحميل الصور' },
+  'project.training_center_feature_2': { en: 'Separate Web API and MVC layers with HttpClient integration', ar: 'طبقات Web API و MVC منفصلة مع تكامل HttpClient' },
+  'project.training_center_feature_3': { en: 'Clean Architecture with Identity & Localization layers', ar: 'Clean Architecture مع طبقات Identity و Localization' },
+  'project.training_center_feature_4': { en: 'Lab and Trainer management modules', ar: 'وحدات إدارة المعامل والمدربين' },
+
+  // Educational Platform Project
+  'project.edu_platform_title': { en: 'Educational Platform - Teacher Portal', ar: 'منصة تعليمية - بوابة المعلم' },
+  'project.edu_platform_desc': {
+    en: 'An educational platform for teachers with course management, student subscriptions, dashboard, and admin panel.',
+    ar: 'منصة تعليمية للمعلمين مع إدارة الكورسات واشتراكات الطلاب ولوحة تحكم وبوابة أدمن.',
+  },
+  'project.edu_platform_long_desc': {
+    en: 'A frontend educational platform designed for teachers, featuring user authentication (login/register), a dashboard for managing courses, a course viewer for students, subscription management, a notes system, and an admin panel. Built with HTML5 and CSS3 as a clean, responsive web application.',
+    ar: 'منصة تعليمية للواجهة الأمامية مصممة للمعلمين، تتضمن مصادقة المستخدم (تسجيل دخول/تسجيل)، لوحة تحكم لإدارة الكورسات، عارض كورسات للطلاب، إدارة الاشتراكات، نظام ملاحظات، وبوابة أدمن. مبنية بـ HTML5 و CSS3 كتطبيق ويب نظيف ومتجاوب.',
+  },
+  'project.edu_platform_role': { en: 'Frontend Developer', ar: 'مطور واجهة أمامية' },
+  'project.edu_platform_duration': { en: '2 Weeks', ar: 'أسبوعين' },
+  'project.edu_platform_feature_1': { en: 'User authentication with login & registration', ar: 'مصادقة المستخدم مع تسجيل الدخول والتسجيل' },
+  'project.edu_platform_feature_2': { en: 'Dashboard with course management & viewer', ar: 'لوحة تحكم مع إدارة الكورسات وعارض الكورسات' },
+  'project.edu_platform_feature_3': { en: 'Student subscription & notes system', ar: 'نظام اشتراكات الطلاب والملاحظات' },
+  'project.edu_platform_feature_4': { en: 'Admin panel for platform management', ar: 'بوابة أدمن لإدارة المنصة' },
 };

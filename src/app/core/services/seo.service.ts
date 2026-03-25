@@ -9,17 +9,17 @@ export class SeoService {
   private document = inject(DOCUMENT);
 
   initDefaultMeta(): void {
-    this.title.setTitle('Mohamed Mohr | Full Stack .NET + Angular Developer');
+    this.title.setTitle('Taha Elshafei | Full Stack .NET Developer');
 
     this.meta.addTags([
-      { name: 'description', content: 'Portfolio of Mohamed Mohr - Full Stack Developer specializing in ASP.NET Core, Web API, Angular, TypeScript, and SQL Server.' },
-      { name: 'keywords', content: 'Mohamed Mohr, Full Stack Developer, .NET, Angular, ASP.NET Core, TypeScript, SQL Server, Portfolio, Web Developer' },
-      { name: 'author', content: 'Mohamed Mohr' },
-      { property: 'og:title', content: 'Mohamed Mohr | Full Stack .NET + Angular Developer' },
+      { name: 'description', content: 'Portfolio of Taha Elshafei - Full Stack Developer specializing in ASP.NET Core, Web API, Angular, TypeScript, and SQL Server.' },
+      { name: 'keywords', content: 'Taha Elshafei, Full Stack Developer, .NET, Angular, ASP.NET Core, TypeScript, SQL Server, Portfolio, Web Developer' },
+      { name: 'author', content: 'Taha Elshafei' },
+      { property: 'og:title', content: 'Taha Elshafei | Full Stack .NET Developer' },
       { property: 'og:description', content: 'Professional portfolio showcasing full stack .NET and Angular projects.' },
       { property: 'og:type', content: 'website' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Mohamed Mohr | Full Stack .NET + Angular Developer' },
+      { name: 'twitter:title', content: 'Taha Elshafei | Full Stack .NET Developer' },
       { name: 'twitter:description', content: 'Professional portfolio showcasing full stack .NET and Angular projects.' },
       { name: 'robots', content: 'index, follow' },
     ]);
@@ -28,7 +28,7 @@ export class SeoService {
   }
 
   updateMeta(title: string, description: string): void {
-    const fullTitle = `${title} | Mohamed Mohr`;
+    const fullTitle = `${title} | Taha Elshafei`;
     this.title.setTitle(fullTitle);
     this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({ property: 'og:title', content: fullTitle });
@@ -41,11 +41,11 @@ export class SeoService {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      name: 'Mohamed Mohr',
-      jobTitle: 'Full Stack .NET + Angular Developer',
+      name: 'Taha Elshafei',
+      jobTitle: 'Full Stack .NET Developer',
       sameAs: [
-        'https://github.com/mohamedmohr',
-        'https://linkedin.com/in/mohamedmohr',
+        'https://github.com/taha-elshafei',
+        'https://www.linkedin.com/in/engtaha7',
       ],
       knowsAbout: ['ASP.NET Core', 'Angular', 'TypeScript', 'SQL Server', 'C#', 'Web API'],
     };
