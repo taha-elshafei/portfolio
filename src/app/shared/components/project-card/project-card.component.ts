@@ -106,13 +106,6 @@ import { TranslationService } from '../../../core/services/translation.service';
       display: block;
       height: 100%;
     }
-    :host-context([data-theme="light"]) .glass {
-      background: rgba(255, 255, 255, 0.6);
-      border-color: rgba(6, 182, 212, 0.15);
-    }
-    :host-context([data-theme="light"]) p {
-      color: var(--color-light-text-secondary);
-    }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

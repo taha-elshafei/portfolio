@@ -3,7 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ScrollProgressComponent } from './shared/components/scroll-progress/scroll-progress.component';
-import { ThemeService } from './core/services/theme.service';
 import { SeoService } from './core/services/seo.service';
 import { TranslationService } from './core/services/translation.service';
 import { PERSONAL_INFO } from './core/data/portfolio.data';
@@ -57,9 +56,6 @@ import { PERSONAL_INFO } from './core/data/portfolio.data';
       background: var(--color-dark-bg, #050b15);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
-    :host-context([data-theme="light"]) .splash {
-      background: var(--color-light-bg, #f0fdfa);
-    }
     .splash-exit {
       opacity: 0;
       transform: scale(1.05);
@@ -112,7 +108,6 @@ import { PERSONAL_INFO } from './core/data/portfolio.data';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
-  private themeService = inject(ThemeService);
   private seoService = inject(SeoService);
   private ts = inject(TranslationService);
 

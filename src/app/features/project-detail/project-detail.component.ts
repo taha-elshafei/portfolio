@@ -312,36 +312,7 @@ import { ScrollAnimationDirective } from '../../shared/directives/scroll-animati
       </section>
     }
   `,
-  styles: [`
-    :host-context([data-theme="light"]) .bg-\\[var\\(--color-dark-bg-secondary\\)\\],
-    :host-context([data-theme="light"]) section.bg-\\[var\\(--color-dark-bg-secondary\\)\\] {
-      background-color: var(--color-light-bg-secondary);
-    }
-    :host-context([data-theme="light"]) h1,
-    :host-context([data-theme="light"]) h2,
-    :host-context([data-theme="light"]) h3 {
-      color: var(--color-light-text);
-    }
-    :host-context([data-theme="light"]) p,
-    :host-context([data-theme="light"]) span:not(.text-\\[var\\(--color-primary\\)\\]),
-    :host-context([data-theme="light"]) li span {
-      color: var(--color-light-text-secondary);
-    }
-    :host-context([data-theme="light"]) .bg-\\[var\\(--color-dark-card\\)\\]\\/80,
-    :host-context([data-theme="light"]) .bg-\\[var\\(--color-dark-card\\)\\],
-    :host-context([data-theme="light"]) li.bg-\\[var\\(--color-dark-card\\)\\] {
-      background-color: var(--color-light-card);
-    }
-    :host-context([data-theme="light"]) .border-\\[var\\(--color-dark-border\\)\\] {
-      border-color: var(--color-light-border);
-    }
-    :host-context([data-theme="light"]) .from-\\[var\\(--color-dark-bg\\)\\] {
-      --tw-gradient-from: var(--color-light-bg);
-    }
-    :host-context([data-theme="light"]) a.text-\\[var\\(--color-dark-text\\)\\] {
-      color: var(--color-light-text);
-    }
-  `],
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectDetailComponent {

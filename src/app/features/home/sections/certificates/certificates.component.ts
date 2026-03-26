@@ -73,20 +73,7 @@ import { TranslationService } from '../../../../core/services/translation.servic
       </div>
     </section>
   `,
-  styles: [`
-    :host-context([data-theme="light"]) .glass {
-      background: rgba(255, 255, 255, 0.6);
-      border-color: rgba(6, 182, 212, 0.15);
-    }
-    :host-context([data-theme="light"]) h3 {
-      color: var(--color-light-text);
-    }
-    :host-context([data-theme="light"]) p,
-    :host-context([data-theme="light"]) span.text-sm,
-    :host-context([data-theme="light"]) div.text-sm {
-      color: var(--color-light-text-secondary);
-    }
-  `],
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CertificatesComponent {

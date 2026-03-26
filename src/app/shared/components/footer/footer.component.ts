@@ -29,11 +29,7 @@ import { TranslationService } from '../../../core/services/translation.service';
       </div>
     </footer>
   `,
-  styles: [`
-    :host-context([data-theme="light"]) .text-\\[var\\(--color-dark-text-secondary\\)\\] {
-      color: var(--color-light-text-secondary);
-    }
-  `],
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {

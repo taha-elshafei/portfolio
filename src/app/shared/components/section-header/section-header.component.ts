@@ -25,5 +25,5 @@ export class SectionHeaderComponent {
   titleRest = input<string>('');
   subtitle = input<string>('');
 
-  readonly themeTextSecondary = 'text-[var(--color-dark-text-secondary)] [data-theme=light]_&:text-[var(--color-light-text-secondary)]';
+  readonly themeTextSecondary = 'text-[var(--color-dark-text-secondary)]';
 }

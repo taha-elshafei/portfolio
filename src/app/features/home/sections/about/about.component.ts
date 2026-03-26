@@ -72,18 +72,7 @@ import { VisitorCounterService } from '../../../../core/services/visitor-counter
       </div>
     </section>
   `,
-  styles: [`
-    :host-context([data-theme="light"]) section {
-      background-color: var(--color-light-bg-secondary) !important;
-    }
-    :host-context([data-theme="light"]) .text-\\[var\\(--color-dark-text-secondary\\)\\] {
-      color: var(--color-light-text-secondary);
-    }
-    :host-context([data-theme="light"]) .glass {
-      background: rgba(255, 255, 255, 0.6);
-      border-color: rgba(6, 182, 212, 0.15);
-    }
-  `],
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent {

@@ -18,10 +18,6 @@ import { Skill } from '../../../core/models/skill.model';
     :host {
       display: block;
     }
-    :host-context([data-theme="light"]) .glass {
-      background: rgba(255, 255, 255, 0.6);
-      border-color: rgba(6, 182, 212, 0.15);
-    }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

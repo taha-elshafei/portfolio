@@ -32,11 +32,7 @@ import { TranslationService } from '../../../../core/services/translation.servic
       </div>
     </section>
   `,
-  styles: [`
-    :host-context([data-theme="light"]) section {
-      background-color: var(--color-light-bg-secondary) !important;
-    }
-  `],
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent {

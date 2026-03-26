@@ -1,6 +1,5 @@
 import { Component, inject, signal, ChangeDetectionStrategy, afterNextRender } from '@angular/core';
 import { Router } from '@angular/router';
-import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 import { LanguageToggleComponent } from '../language-toggle/language-toggle.component';
 import { ScrollService } from '../../../core/services/scroll.service';
 import { TranslationService } from '../../../core/services/translation.service';
@@ -17,7 +16,7 @@ const NAV_KEYS = [
 
 @Component({
   selector: 'app-navbar',
-  imports: [ThemeToggleComponent, LanguageToggleComponent],
+  imports: [LanguageToggleComponent],
   template: `
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
          [class.nav-scrolled]="scrolled()"
@@ -43,7 +42,6 @@ const NAV_KEYS = [
               </button>
             }
             <app-language-toggle />
-            <app-theme-toggle />
             <a [href]="personalInfo.cvUrl" download="Taha_Elshafei_CV.pdf" target="_blank" rel="noopener noreferrer"
                class="ms-2 px-4 py-2 text-sm font-medium rounded-lg text-white
                       transition-all duration-300 no-underline hover:shadow-lg hover:shadow-[var(--color-primary)]/25"
@@ -55,7 +53,6 @@ const NAV_KEYS = [
           <!-- Mobile Menu Button -->
           <div class="flex items-center gap-2 md:hidden">
             <app-language-toggle />
-            <app-theme-toggle />
             <button (click)="mobileMenuOpen.set(!mobileMenuOpen())"
                     class="p-2 rounded-lg cursor-pointer bg-transparent border-none text-inherit"
                     [attr.aria-label]="ts.t('nav.toggle_menu')">
@@ -107,15 +104,6 @@ const NAV_KEYS = [
       -webkit-backdrop-filter: blur(24px);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(6, 182, 212, 0.05);
       border-bottom: 1px solid rgba(6, 182, 212, 0.1);
-    }
-    :host-context([data-theme="light"]) .nav-scrolled {
-      background: rgba(240, 253, 250, 0.85) !important;
-      border-color: rgba(6, 182, 212, 0.12) !important;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06), 0 0 20px rgba(6, 182, 212, 0.05);
-    }
-    :host-context([data-theme="light"]) .glass-strong {
-      background: rgba(240, 253, 250, 0.9) !important;
-      border-color: rgba(6, 182, 212, 0.12) !important;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,

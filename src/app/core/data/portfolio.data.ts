@@ -21,7 +21,6 @@ export const SKILLS: Skill[] = [
   { name: 'EF Core', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
   { name: 'MediatR / CQRS', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
   { name: 'JWT Authentication', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
-  { name: 'Serilog', icon: 'assets/icons/tech/dotnet.svg', category: 'backend' },
 
   // Database
   { name: 'SQL Server', icon: 'assets/icons/tech/sql-server.svg', category: 'database' },
@@ -41,8 +40,6 @@ export const SKILLS: Skill[] = [
   { name: 'GitHub', icon: 'assets/icons/tech/git.svg', category: 'tools' },
   { name: 'Postman', icon: 'assets/icons/tech/vscode.svg', category: 'tools' },
   { name: 'Swagger', icon: 'assets/icons/tech/vscode.svg', category: 'tools' },
-  { name: 'Visual Studio', icon: 'assets/icons/tech/vs.svg', category: 'tools' },
-  { name: 'VS Code', icon: 'assets/icons/tech/vscode.svg', category: 'tools' },
 ];
 
 export const PROJECTS: Project[] = [

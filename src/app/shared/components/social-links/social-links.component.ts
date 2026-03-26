@@ -22,11 +22,7 @@ import { SocialLink } from '../../../core/models/social-link.model';
       }
     </div>
   `,
-  styles: [`
-    :host-context([data-theme="light"]) a {
-      color: var(--color-light-text-secondary);
-    }
-  `],
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SocialLinksComponent {
