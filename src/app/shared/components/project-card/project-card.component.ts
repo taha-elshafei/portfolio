@@ -1,4 +1,4 @@
-import { Component, input, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, input, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Project } from '../../../core/models/project.model';
 import { TranslationService } from '../../../core/services/translation.service';
@@ -9,19 +9,31 @@ import { TranslationService } from '../../../core/services/translation.service';
   template: `
     <a [routerLink]="['/projects', project().slug]"
        class="block h-full no-underline text-inherit">
-      <div class="h-full flex flex-col rounded-xl overflow-hidden border transition-all duration-300
-                  bg-[var(--color-dark-card)] border-[var(--color-dark-border)]
-                  hover:border-[var(--color-primary)] hover:shadow-xl hover:-translate-y-2 group"
+      <div class="h-full flex flex-col rounded-xl overflow-hidden transition-all duration-300
+                  glass hover:border-[var(--color-primary)]/30
+                  hover:shadow-xl hover:shadow-[var(--color-primary)]/10 hover:-translate-y-2 group"
       >
-        <!-- Project Image -->
+        <!-- Project Image / Placeholder -->
         <div class="relative h-52 overflow-hidden"
-             [style.viewTransitionName]="'project-image-' + project().slug"
-             [style.background-color]="'#fff'">
-          <img [src]="project().image" [alt]="ts.t(project().title)"
-               class="absolute inset-0 w-full h-full object-contain"
-               (error)="$any($event.target).style.display='none'" />
+             [style.viewTransitionName]="'project-image-' + project().slug">
+          @if (project().image && !imgError()) {
+            <img [src]="project().image" [alt]="ts.t(project().title)"
+                 class="absolute inset-0 w-full h-full object-contain"
+                 [style.background-color]="'#fff'"
+                 (error)="imgError.set(true)" />
+          } @else {
+            <!-- Gradient Placeholder -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-3"
+                 [style.background]="project().placeholderGradient || 'linear-gradient(135deg, #06b6d4, #14b8a6)'">
+              <span class="text-5xl">{{ project().placeholderIcon || '💻' }}</span>
+              <span class="text-white/80 text-sm font-semibold tracking-wide uppercase">
+                {{ ts.t(project().title) }}
+              </span>
+            </div>
+          }
           <!-- Overlay on hover -->
-          <div class="absolute inset-0 bg-[var(--color-primary)]/0 group-hover:bg-[var(--color-primary)]/10 transition-all duration-300"></div>
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+               style="background: linear-gradient(135deg, rgba(6,182,212,0.15), rgba(20,184,166,0.1), transparent);"></div>
         </div>
 
         <!-- Content -->
@@ -38,7 +50,8 @@ import { TranslationService } from '../../../core/services/translation.service';
           <div class="flex flex-wrap gap-2 mb-5">
             @for (tech of project().technologies; track tech) {
               <span class="text-xs px-3 py-1 rounded-full font-medium
-                           bg-[var(--color-primary-subtle)] text-[var(--color-primary)]">
+                           bg-[var(--color-primary-subtle)] text-[var(--color-primary)]
+                           border border-[var(--color-primary)]/10">
                 {{ tech }}
               </span>
             }
@@ -49,9 +62,9 @@ import { TranslationService } from '../../../core/services/translation.service';
             @if (project().liveUrl) {
               <a [href]="project().liveUrl" target="_blank" rel="noopener noreferrer"
                  (click)="$event.stopPropagation()"
-                 class="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg
-                        bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)]
-                        transition-colors duration-300">
+                 class="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg text-white
+                        transition-all duration-300 hover:shadow-lg hover:shadow-[var(--color-primary)]/25"
+                 style="background: linear-gradient(135deg, #06b6d4, #14b8a6);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -64,8 +77,8 @@ import { TranslationService } from '../../../core/services/translation.service';
               <a [href]="project().githubUrl" target="_blank" rel="noopener noreferrer"
                  (click)="$event.stopPropagation()"
                  class="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg
-                        border border-[var(--color-dark-border)] hover:border-[var(--color-primary)]
-                        hover:text-[var(--color-primary)] transition-colors duration-300">
+                        glass hover:border-[var(--color-primary)]/30
+                        hover:text-[var(--color-primary)] transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
@@ -93,10 +106,9 @@ import { TranslationService } from '../../../core/services/translation.service';
       display: block;
       height: 100%;
     }
-    :host-context([data-theme="light"]) div:first-child {
-      background-color: var(--color-light-card);
-      border-color: var(--color-light-border);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    :host-context([data-theme="light"]) .glass {
+      background: rgba(255, 255, 255, 0.6);
+      border-color: rgba(6, 182, 212, 0.15);
     }
     :host-context([data-theme="light"]) p {
       color: var(--color-light-text-secondary);
@@ -107,4 +119,5 @@ import { TranslationService } from '../../../core/services/translation.service';
 export class ProjectCardComponent {
   ts = inject(TranslationService);
   project = input.required<Project>();
+  imgError = signal(false);
 }

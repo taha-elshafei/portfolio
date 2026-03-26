@@ -27,16 +27,16 @@ const NAV_KEYS = [
           <!-- Logo -->
           <button (click)="navigateToSection('hero')"
                   class="text-xl font-bold tracking-tight cursor-pointer bg-transparent border-none">
-            <span class="text-[var(--color-primary)]">&lt;</span>
+            <span class="gradient-text">&lt;</span>
             <span>{{ personalInfo.name.split(' ')[0] }}</span>
-            <span class="text-[var(--color-primary)]"> /&gt;</span>
+            <span class="gradient-text"> /&gt;</span>
           </button>
 
           <!-- Desktop Nav -->
           <div class="hidden md:flex items-center gap-1">
             @for (item of navKeys; track item.sectionId) {
               <button (click)="navigateToSection(item.sectionId)"
-                      class="px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-300
+                      class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300
                              hover:text-[var(--color-primary)] hover:bg-[var(--color-primary-subtle)]
                              cursor-pointer bg-transparent border-none text-inherit">
                 {{ ts.t(item.key) }}
@@ -45,9 +45,9 @@ const NAV_KEYS = [
             <app-language-toggle />
             <app-theme-toggle />
             <a [href]="personalInfo.cvUrl" download="Taha_Elshafei_CV.pdf" target="_blank" rel="noopener noreferrer"
-               class="ms-2 px-4 py-2 text-sm font-medium rounded-lg
-                      bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)]
-                      transition-colors duration-300 no-underline">
+               class="ms-2 px-4 py-2 text-sm font-medium rounded-lg text-white
+                      transition-all duration-300 no-underline hover:shadow-lg hover:shadow-[var(--color-primary)]/25"
+               style="background: linear-gradient(135deg, #06b6d4, #14b8a6);">
               {{ ts.t('nav.download_cv') }}
             </a>
           </div>
@@ -79,8 +79,7 @@ const NAV_KEYS = [
 
       <!-- Mobile Menu -->
       @if (mobileMenuOpen()) {
-        <div class="md:hidden border-t border-[var(--color-dark-border)]
-                    bg-[var(--color-dark-bg)]/95 backdrop-blur-md">
+        <div class="md:hidden glass-strong">
           <div class="px-4 py-4 flex flex-col gap-1">
             @for (item of navKeys; track item.sectionId) {
               <button (click)="navigateToSection(item.sectionId); mobileMenuOpen.set(false)"
@@ -91,9 +90,9 @@ const NAV_KEYS = [
               </button>
             }
             <a [href]="personalInfo.cvUrl" download="Taha_Elshafei_CV.pdf" target="_blank" rel="noopener noreferrer"
-               class="mt-2 px-4 py-3 text-sm font-medium rounded-lg text-center
-                      bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)]
-                      transition-colors duration-300 no-underline">
+               class="mt-2 px-4 py-3 text-sm font-medium rounded-lg text-center text-white
+                      transition-all duration-300 no-underline"
+               style="background: linear-gradient(135deg, #06b6d4, #14b8a6);">
               {{ ts.t('nav.download_cv') }}
             </a>
           </div>
@@ -103,18 +102,20 @@ const NAV_KEYS = [
   `,
   styles: [`
     .nav-scrolled {
-      background-color: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid var(--color-dark-border);
+      background: rgba(5, 11, 21, 0.85);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(6, 182, 212, 0.05);
+      border-bottom: 1px solid rgba(6, 182, 212, 0.1);
     }
     :host-context([data-theme="light"]) .nav-scrolled {
-      background-color: rgba(255, 255, 255, 0.95) !important;
-      border-color: var(--color-light-border) !important;
+      background: rgba(240, 253, 250, 0.85) !important;
+      border-color: rgba(6, 182, 212, 0.12) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06), 0 0 20px rgba(6, 182, 212, 0.05);
     }
-    :host-context([data-theme="light"]) nav > div:last-child {
-      background-color: rgba(255, 255, 255, 0.95) !important;
-      border-color: var(--color-light-border) !important;
+    :host-context([data-theme="light"]) .glass-strong {
+      background: rgba(240, 253, 250, 0.9) !important;
+      border-color: rgba(6, 182, 212, 0.12) !important;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,

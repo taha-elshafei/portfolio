@@ -9,15 +9,22 @@ import { TranslationService } from '../../../../core/services/translation.servic
   selector: 'app-projects',
   imports: [SectionHeaderComponent, ProjectCardComponent, ScrollAnimationDirective],
   template: `
-    <section id="projects" class="py-20 md:py-28 bg-[var(--color-dark-bg-secondary)]">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="projects" class="py-20 md:py-28 relative"
+             style="background: var(--color-dark-bg-secondary);">
+      <!-- Background mesh -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[150px] opacity-[0.05]"
+             style="background: radial-gradient(circle, #a855f7, transparent 70%);"></div>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         <app-section-header
           [titleHighlight]="ts.t('projects.title_highlight')"
           [titleRest]="ts.t('projects.title_rest')"
           [subtitle]="ts.t('projects.subtitle')"
         />
 
-        <div appScrollAnimation class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div appScrollAnimation class="grid md:grid-cols-2 gap-6">
           @for (project of projects; track project.slug) {
             <app-project-card [project]="project" />
           }
@@ -27,7 +34,7 @@ import { TranslationService } from '../../../../core/services/translation.servic
   `,
   styles: [`
     :host-context([data-theme="light"]) section {
-      background-color: var(--color-light-bg-secondary);
+      background-color: var(--color-light-bg-secondary) !important;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,

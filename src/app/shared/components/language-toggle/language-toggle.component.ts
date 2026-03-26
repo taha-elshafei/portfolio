@@ -21,9 +21,8 @@ import { TranslationService } from '../../../core/services/translation.service';
       </button>
 
       @if (open()) {
-        <div class="absolute top-full mt-2 end-0 min-w-[120px] py-1 rounded-lg shadow-xl border
-                    bg-[var(--color-dark-card)] border-[var(--color-dark-border)]
-                    z-50 overflow-hidden">
+        <div class="absolute top-full mt-2 end-0 min-w-[120px] py-1 rounded-lg shadow-xl
+                    glass z-50 overflow-hidden">
           <button (click)="selectLang('en')"
                   class="lang-option w-full px-4 py-2.5 text-sm text-start transition-colors duration-200
                          cursor-pointer border-none bg-transparent text-inherit
@@ -47,9 +46,9 @@ import { TranslationService } from '../../../core/services/translation.service';
       color: var(--color-primary);
       font-weight: 700;
     }
-    :host-context([data-theme="light"]) .absolute {
-      background-color: var(--color-light-card);
-      border-color: var(--color-light-border);
+    :host-context([data-theme="light"]) .glass {
+      background: rgba(255, 255, 255, 0.8);
+      border-color: rgba(6, 182, 212, 0.15);
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,

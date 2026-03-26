@@ -11,7 +11,7 @@ type Category = 'all' | 'frontend' | 'backend' | 'database' | 'tools';
   selector: 'app-tech-stack',
   imports: [SectionHeaderComponent, SkillBadgeComponent, ScrollAnimationDirective],
   template: `
-    <section id="tech-stack" class="py-20 md:py-28">
+    <section id="tech-stack" class="py-20 md:py-28 relative">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <app-section-header
           [titleHighlight]="ts.t('tech.title_highlight')"
@@ -25,8 +25,9 @@ type Category = 'all' | 'frontend' | 'backend' | 'database' | 'tools';
             <button (click)="activeCategory.set(cat.key)"
                     class="px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 cursor-pointer border-none"
                     [class]="activeCategory() === cat.key
-                      ? 'bg-[var(--color-primary)] text-white shadow-lg shadow-[var(--color-primary)]/25'
-                      : 'bg-[var(--color-dark-card)] text-[var(--color-dark-text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--color-primary-subtle)]'">
+                      ? 'text-white shadow-lg shadow-[var(--color-primary)]/25'
+                      : 'glass text-[var(--color-dark-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]/30'"
+                    [style.background]="activeCategory() === cat.key ? 'linear-gradient(135deg, #06b6d4, #14b8a6)' : ''">
               {{ ts.t(cat.translationKey) }}
             </button>
           }
@@ -42,10 +43,9 @@ type Category = 'all' | 'frontend' | 'backend' | 'database' | 'tools';
     </section>
   `,
   styles: [`
-    :host-context([data-theme="light"]) button:not(.bg-\\[var\\(--color-primary\\)\\]) {
-      background-color: var(--color-light-card);
-      color: var(--color-light-text-secondary);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    :host-context([data-theme="light"]) .glass {
+      background: rgba(255, 255, 255, 0.6);
+      border-color: rgba(6, 182, 212, 0.15);
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,

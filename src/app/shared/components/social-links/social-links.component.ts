@@ -13,7 +13,8 @@ import { SocialLink } from '../../../core/models/social-link.model';
            [attr.aria-label]="link.ariaLabel"
            class="flex items-center justify-center rounded-full transition-all duration-300
                   text-[var(--color-dark-text-secondary)] hover:text-[var(--color-primary)]
-                  hover:bg-[var(--color-primary-subtle)] hover:scale-110"
+                  hover:bg-[var(--color-primary-subtle)] hover:scale-110
+                  hover:shadow-lg hover:shadow-[var(--color-primary)]/15"
            [class.w-11]="size() === 'lg'" [class.h-11]="size() === 'lg'"
            [class.w-9]="size() !== 'lg'" [class.h-9]="size() !== 'lg'"
            [innerHTML]="link.safeIcon">

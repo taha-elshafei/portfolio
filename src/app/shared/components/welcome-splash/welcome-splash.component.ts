@@ -133,13 +133,13 @@ interface Particle {
       100% { top: 110%; }
     }
     @keyframes glowPulse {
-      0%, 100% { text-shadow: 0 0 10px rgba(59,130,246,0.5), 0 0 20px rgba(59,130,246,0.3); }
-      50%      { text-shadow: 0 0 20px rgba(59,130,246,0.8), 0 0 40px rgba(59,130,246,0.5), 0 0 60px rgba(59,130,246,0.3); }
+      0%, 100% { text-shadow: 0 0 10px rgba(6,182,212,0.5), 0 0 20px rgba(6,182,212,0.3); }
+      50%      { text-shadow: 0 0 20px rgba(6,182,212,0.8), 0 0 40px rgba(6,182,212,0.5), 0 0 60px rgba(6,182,212,0.3); }
     }
     @keyframes progressGlow {
-      0%   { box-shadow: 0 0 5px rgba(59,130,246,0.5); }
-      50%  { box-shadow: 0 0 20px rgba(59,130,246,0.8), 0 0 40px rgba(59,130,246,0.3); }
-      100% { box-shadow: 0 0 5px rgba(59,130,246,0.5); }
+      0%   { box-shadow: 0 0 5px rgba(6,182,212,0.5); }
+      50%  { box-shadow: 0 0 20px rgba(6,182,212,0.8), 0 0 40px rgba(6,182,212,0.3); }
+      100% { box-shadow: 0 0 5px rgba(6,182,212,0.5); }
     }
     @keyframes floatSlow {
       0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -159,7 +159,7 @@ interface Particle {
     .custom-cursor {
       position: fixed;
       width: 20px; height: 20px;
-      border: 2px solid #3b82f6;
+      border: 2px solid #06b6d4;
       border-radius: 50%;
       pointer-events: none;
       z-index: 99999;
@@ -172,7 +172,7 @@ interface Particle {
     .splash {
       position: fixed; inset: 0; z-index: 9999;
       overflow: hidden;
-      background: #0a0f1c;
+      background: #050b15;
       font-family: 'Fira Code', 'Consolas', monospace;
       transition: none;
       cursor: none;
@@ -187,8 +187,8 @@ interface Particle {
     .grid-bg {
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(6,182,212,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6,182,212,0.04) 1px, transparent 1px);
       background-size: 60px 60px;
       transition: transform 0.3s ease-out;
     }
@@ -203,7 +203,7 @@ interface Particle {
     /* ===== Scanline ===== */
     .scanline {
       position: absolute; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(59,130,246,0.15), transparent);
+      background: linear-gradient(90deg, transparent, rgba(6,182,212,0.15), transparent);
       animation: scanline 4s linear infinite;
       z-index: 10;
     }
@@ -215,11 +215,11 @@ interface Particle {
     }
     .glow-1 {
       top: 20%; left: 15%; width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(6,182,212,0.12) 0%, transparent 70%);
     }
     .glow-2 {
       bottom: 20%; right: 15%; width: 250px; height: 250px;
-      background: radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(20,184,166,0.08) 0%, transparent 70%);
     }
 
     /* ===== Content ===== */
@@ -233,7 +233,7 @@ interface Particle {
     /* ===== Loading Phase ===== */
     .loading { text-align: center; }
     .terminal-text {
-      font-size: 0.75rem; color: rgba(59,130,246,0.6);
+      font-size: 0.75rem; color: rgba(6,182,212,0.6);
       margin-bottom: 30px; letter-spacing: 3px;
     }
     .progress-track {
@@ -243,12 +243,12 @@ interface Particle {
     }
     .progress-fill {
       height: 100%; border-radius: 10px;
-      background: linear-gradient(90deg, #3b82f6, #a855f7);
+      background: linear-gradient(90deg, #06b6d4, #14b8a6);
       transition: width 0.1s ease;
       animation: progressGlow 2s ease infinite;
     }
     .progress-pct {
-      font-size: 0.7rem; color: rgba(59,130,246,0.4);
+      font-size: 0.7rem; color: rgba(6,182,212,0.4);
       margin-top: 15px; font-variant-numeric: tabular-nums;
     }
 
@@ -265,13 +265,13 @@ interface Particle {
     }
     .line-deco {
       display: block; width: 40px; height: 1px;
-      background: linear-gradient(90deg, transparent, #3b82f6);
+      background: linear-gradient(90deg, transparent, #06b6d4);
     }
     .line-deco:last-child {
-      background: linear-gradient(90deg, #3b82f6, transparent);
+      background: linear-gradient(90deg, #06b6d4, transparent);
     }
     .welcome-text {
-      font-size: 0.65rem; color: #3b82f6;
+      font-size: 0.65rem; color: #06b6d4;
       letter-spacing: 6px; text-transform: uppercase; opacity: 0.7;
     }
 
@@ -284,7 +284,7 @@ interface Particle {
       margin-bottom: 8px;
     }
     .name.glow { animation: glowPulse 3s ease-in-out infinite; }
-    .cursor { color: #3b82f6; font-weight: 300; }
+    .cursor { color: #06b6d4; font-weight: 300; }
 
     /* ===== Title ===== */
     .title-row { margin-bottom: 35px; }
@@ -296,7 +296,7 @@ interface Particle {
       font-family: 'Inter', sans-serif;
       font-size: clamp(0.85rem, 2vw, 1.1rem);
       font-weight: 400; letter-spacing: 4px; text-transform: uppercase;
-      background: linear-gradient(135deg, #3b82f6, #a855f7);
+      background: linear-gradient(135deg, #06b6d4, #14b8a6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -306,19 +306,19 @@ interface Particle {
     .enter-wrap { margin-top: 10px; }
     .enter-btn {
       font-family: 'Fira Code', monospace;
-      font-size: 0.85rem; color: #3b82f6;
+      font-size: 0.85rem; color: #06b6d4;
       background: transparent;
-      border: 1px solid rgba(59,130,246,0.4);
+      border: 1px solid rgba(6,182,212,0.4);
       padding: 14px 45px; border-radius: 0;
       cursor: pointer; letter-spacing: 4px;
       text-transform: uppercase;
       transition: all 0.3s ease;
     }
     .enter-btn:hover {
-      background: rgba(59,130,246,0.15);
-      border-color: #3b82f6;
+      background: rgba(6,182,212,0.15);
+      border-color: #06b6d4;
       transform: translateY(-2px);
-      box-shadow: 0 10px 40px rgba(59,130,246,0.2);
+      box-shadow: 0 10px 40px rgba(6,182,212,0.2);
     }
     .arrow { margin-inline-start: 8px; opacity: 0.6; }
 
@@ -326,21 +326,21 @@ interface Particle {
     .corner {
       position: absolute; width: 30px; height: 30px;
     }
-    .tl { top: 25px; left: 25px; border-left: 1px solid rgba(59,130,246,0.3); border-top: 1px solid rgba(59,130,246,0.3); }
-    .tr { top: 25px; right: 25px; border-right: 1px solid rgba(59,130,246,0.3); border-top: 1px solid rgba(59,130,246,0.3); }
-    .bl { bottom: 25px; left: 25px; border-left: 1px solid rgba(59,130,246,0.3); border-bottom: 1px solid rgba(59,130,246,0.3); }
-    .br { bottom: 25px; right: 25px; border-right: 1px solid rgba(59,130,246,0.3); border-bottom: 1px solid rgba(59,130,246,0.3); }
+    .tl { top: 25px; left: 25px; border-left: 1px solid rgba(6,182,212,0.3); border-top: 1px solid rgba(6,182,212,0.3); }
+    .tr { top: 25px; right: 25px; border-right: 1px solid rgba(6,182,212,0.3); border-top: 1px solid rgba(6,182,212,0.3); }
+    .bl { bottom: 25px; left: 25px; border-left: 1px solid rgba(6,182,212,0.3); border-bottom: 1px solid rgba(6,182,212,0.3); }
+    .br { bottom: 25px; right: 25px; border-right: 1px solid rgba(6,182,212,0.3); border-bottom: 1px solid rgba(6,182,212,0.3); }
 
     /* ===== Status ===== */
     .status {
       position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
-      font-size: 0.65rem; color: rgba(59,130,246,0.25);
+      font-size: 0.65rem; color: rgba(6,182,212,0.25);
       letter-spacing: 2px; display: flex; align-items: center; gap: 8px;
       z-index: 30;
     }
     .dot {
       width: 6px; height: 6px; border-radius: 50%;
-      background: #3b82f6; display: inline-block;
+      background: #06b6d4; display: inline-block;
       animation: pulse 2s ease infinite;
     }
 
@@ -372,7 +372,7 @@ export class WelcomeSplashComponent {
 
   constructor() {
     // Generate particles
-    const colors = ['#3b82f6', '#a855f7', '#60a5fa'];
+    const colors = ['#06b6d4', '#14b8a6', '#22d3ee'];
     this.particles = Array.from({ length: 40 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,

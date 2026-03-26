@@ -8,7 +8,7 @@ import { TranslationService } from '../../../../core/services/translation.servic
   selector: 'app-certificates',
   imports: [SectionHeaderComponent, ScrollAnimationDirective],
   template: `
-    <section id="certificates" class="py-20 md:py-28">
+    <section id="certificates" class="py-20 md:py-28 relative">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <app-section-header
           [titleHighlight]="ts.t('certs.title_highlight')"
@@ -18,17 +18,20 @@ import { TranslationService } from '../../../../core/services/translation.servic
 
         <div appScrollAnimation class="grid md:grid-cols-2 gap-6">
           @for (cert of certificates; track cert.title) {
-            <div class="group relative rounded-2xl border border-[var(--color-dark-border)] bg-[var(--color-dark-card)] p-6 transition-all duration-300 hover:border-[var(--color-primary)]/50 hover:shadow-lg hover:shadow-[var(--color-primary)]/5">
+            <div class="group relative rounded-2xl p-6 transition-all duration-300
+                        glass hover:border-[var(--color-primary)]/30
+                        hover:shadow-lg hover:shadow-[var(--color-primary)]/10 hover:-translate-y-1">
               <!-- Badge icon -->
               <div class="mb-4 flex items-center gap-3">
-                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-white"
+                     style="background: linear-gradient(135deg, #06b6d4, #14b8a6);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="8" r="6"/>
                     <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-lg font-semibold text-[var(--color-dark-text)]">{{ cert.title }}</h3>
+                  <h3 class="text-lg font-semibold">{{ cert.title }}</h3>
                   <p class="text-sm text-[var(--color-dark-text-secondary)]">{{ cert.issuer }}</p>
                 </div>
               </div>
@@ -57,7 +60,8 @@ import { TranslationService } from '../../../../core/services/translation.servic
               @if (cert.topics?.length) {
                 <div class="mt-4 flex flex-wrap gap-2">
                   @for (topic of cert.topics; track topic) {
-                    <span class="rounded-full bg-[var(--color-primary)]/10 px-3 py-1 text-xs font-medium text-[var(--color-primary)]">
+                    <span class="rounded-full px-3 py-1 text-xs font-medium text-[var(--color-primary)]
+                                 bg-[var(--color-primary-subtle)] border border-[var(--color-primary)]/10">
                       {{ topic }}
                     </span>
                   }
@@ -70,9 +74,9 @@ import { TranslationService } from '../../../../core/services/translation.servic
     </section>
   `,
   styles: [`
-    :host-context([data-theme="light"]) div.group {
-      background-color: var(--color-light-card);
-      border-color: var(--color-light-border);
+    :host-context([data-theme="light"]) .glass {
+      background: rgba(255, 255, 255, 0.6);
+      border-color: rgba(6, 182, 212, 0.15);
     }
     :host-context([data-theme="light"]) h3 {
       color: var(--color-light-text);

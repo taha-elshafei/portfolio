@@ -166,4 +166,21 @@ export const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   'project.edu_platform_feature_2': { en: 'Dashboard with course management & viewer', ar: 'لوحة تحكم مع إدارة الكورسات وعارض الكورسات' },
   'project.edu_platform_feature_3': { en: 'Student subscription & notes system', ar: 'نظام اشتراكات الطلاب والملاحظات' },
   'project.edu_platform_feature_4': { en: 'Admin panel for platform management', ar: 'بوابة أدمن لإدارة المنصة' },
+
+  // NextLearnHub Project
+  'project.nextlearnhub_title': { en: 'NextLearnHub', ar: 'NextLearnHub' },
+  'project.nextlearnhub_desc': {
+    en: 'A multi-role EdTech SaaS platform with four independent portals for Super Admin, Providers, Profile Subdomains, and End Users.',
+    ar: 'منصة تعليمية SaaS متعددة الأدوار بأربع بوابات مستقلة: مسؤول أعلى، مقدمي خدمات، نطاقات فرعية، ومستخدمين.',
+  },
+  'project.nextlearnhub_long_desc': {
+    en: 'A comprehensive multi-role EdTech SaaS platform featuring four independent portals. The Super Admin dashboard provides complete platform management. The Provider portal allows educational institutions to manage their courses and content. Each provider gets a unique subdomain with a dynamic profile system. The End User portal offers course browsing, enrollment workflows, and personalized learning dashboards. Built with a modern tech stack focusing on performance, scalability, and user experience.',
+    ar: 'منصة تعليمية SaaS شاملة متعددة الأدوار تتضمن أربع بوابات مستقلة. لوحة تحكم المسؤول الأعلى توفر إدارة كاملة للمنصة. بوابة مقدم الخدمة تتيح للمؤسسات التعليمية إدارة دوراتها ومحتواها. كل مقدم خدمة يحصل على نطاق فرعي فريد مع نظام ملف تعريف ديناميكي. بوابة المستخدم النهائي توفر تصفح الدورات وعمليات التسجيل ولوحات تعلم مخصصة.',
+  },
+  'project.nextlearnhub_role': { en: 'Full Stack Developer', ar: 'مطور ويب متكامل' },
+  'project.nextlearnhub_duration': { en: '4 Months', ar: '٤ شهور' },
+  'project.nextlearnhub_feature_1': { en: 'Multi-role portal system (Super Admin, Provider, End User)', ar: 'نظام بوابات متعدد الأدوار (مسؤول أعلى، مقدم خدمة، مستخدم)' },
+  'project.nextlearnhub_feature_2': { en: 'Dynamic subdomain system for provider profiles', ar: 'نظام نطاقات فرعية ديناميكي لملفات مقدمي الخدمات' },
+  'project.nextlearnhub_feature_3': { en: 'Course enrollment workflows and learning dashboards', ar: 'عمليات تسجيل الدورات ولوحات تعلم مخصصة' },
+  'project.nextlearnhub_feature_4': { en: 'Comprehensive admin dashboard for platform management', ar: 'لوحة تحكم شاملة لإدارة المنصة' },
 };

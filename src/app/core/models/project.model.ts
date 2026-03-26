@@ -13,7 +13,9 @@ export interface Project {
   slug: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  placeholderIcon?: string;
+  placeholderGradient?: string;
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
