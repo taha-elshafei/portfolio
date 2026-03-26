@@ -123,21 +123,42 @@ export const PROJECTS: Project[] = [
 
 export const CERTIFICATES: Certificate[] = [
   {
-    title: 'Full Stack Developer .NET',
+    title: 'ASP Full Stack Developer',
     issuer: 'CLS Learning Solutions',
-    date: '2025',
+    credentialId: '099088',
+    date: 'Feb 2025 – Jul 2025',
     topics: [
+      'Microsoft SQL Essentials',
       'C# Programming',
-      'SQL Server',
-      'HTML5, JavaScript & CSS3',
-      'ASP.NET Core MVC',
-      'ASP.NET Core Web API',
+      'Programming in HTML5, JavaScript & CSS3',
+      'Developing ASP.NET Core MVC Web Applications',
+      'ASP Core Web APIs',
     ],
   },
   {
-    title: 'Artificial Intelligence',
+    title: 'Developing ASP.Net Web Applications',
+    issuer: 'Microsoft / CLS Learning Solutions',
+    courseId: 'Course 20486',
+    date: 'Jul 2025',
+  },
+  {
+    title: 'Programming in HTML5, JavaScript & CSS3',
+    issuer: 'Microsoft / CLS Learning Solutions',
+    courseId: 'Course 20480',
+    date: 'Jul 2025',
+  },
+  {
+    title: 'Artificial Intelligence (72 hrs)',
     issuer: 'ITI - Information Technology Institute',
-    date: '2023',
+    date: 'Jan 2023',
+    topics: [
+      'Introduction to Artificial Intelligence',
+      'Probability & Statistics for Machine Learning',
+      'Linear Algebra for Data Science',
+      'Introduction to Python',
+      'Data Preparation and Exploration',
+      'Neural Network & Deep Learning',
+    ],
   },
 ];
 
