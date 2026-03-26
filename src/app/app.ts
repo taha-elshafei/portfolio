@@ -53,7 +53,7 @@ import { PERSONAL_INFO } from './core/data/portfolio.data';
     .splash {
       position: fixed; inset: 0; z-index: 9999;
       display: flex; align-items: center; justify-content: center;
-      background: var(--color-dark-bg, #050b15);
+      background: var(--color-dark-bg, #f0fdfa);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
     .splash-exit {
