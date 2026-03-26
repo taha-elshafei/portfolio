@@ -127,6 +127,7 @@ export const CERTIFICATES: Certificate[] = [
     issuer: 'CLS Learning Solutions',
     credentialId: '099088',
     date: 'Feb 2025 – Jul 2025',
+    image: 'images/certificates/cls-fullstack.jpg',
     topics: [
       'Microsoft SQL Essentials',
       'C# Programming',
@@ -140,17 +141,20 @@ export const CERTIFICATES: Certificate[] = [
     issuer: 'Microsoft / CLS Learning Solutions',
     courseId: 'Course 20486',
     date: 'Jul 2025',
+    image: 'images/certificates/microsoft-aspnet.jpg',
   },
   {
     title: 'Programming in HTML5, JavaScript & CSS3',
     issuer: 'Microsoft / CLS Learning Solutions',
     courseId: 'Course 20480',
     date: 'Jul 2025',
+    image: 'images/certificates/microsoft-html5-js-css3.jpg',
   },
   {
     title: 'Artificial Intelligence (72 hrs)',
     issuer: 'ITI - Information Technology Institute',
     date: 'Jan 2023',
+    image: 'images/certificates/iti-ai.jpg',
     topics: [
       'Introduction to Artificial Intelligence',
       'Probability & Statistics for Machine Learning',

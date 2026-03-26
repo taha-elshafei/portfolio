@@ -5,4 +5,5 @@ export interface Certificate {
   courseId?: string;
   topics?: string[];
   credentialId?: string;
+  image?: string;
 }
